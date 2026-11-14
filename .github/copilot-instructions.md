@@ -31,3 +31,56 @@
 - O arquivo `.env` não pode ser enviado ao GitHub.
 - O frontend nunca deve receber ou expor a chave da API.
 - Validar a data informada pelo usuário e tratar erros da API.
+
+# Registro das Interações com o GitHub Copilot
+
+
+## Interação 1 — Estrutura do projeto
+
+**O que pedi:**  
+Pedi ao Copilot para criar a estrutura inicial do projeto com Node.js e Express.
+
+**O que o Copilot respondeu:**  
+Criou o `package.json` e a estrutura inicial de pastas do projeto.
+---
+## Interação 2 — Backend
+
+**O que pedi:**  
+Pedi para criar o servidor Express e preparar a rota para o APOD.
+
+**O que o Copilot respondeu:**  
+Criou o servidor e a rota solicitada.
+---
+
+## Interação 3 — API da NASA
+
+**O que pedi:**  
+Pedi para integrar o backend com a API NASA APOD utilizando a chave armazenada no `.env`.
+
+**O que o Copilot respondeu:**  
+Criou o serviço para consultar a API e utilizar a variável `NASA_API_KEY`.
+---
+
+## Interação 4 — Frontend
+
+**O que pedi:**  
+Pedi para criar a interface para mostrar título, data, imagem ou vídeo e explicação do APOD.
+
+**O que o Copilot respondeu:**  
+Criou a interface utilizando HTML, CSS e JavaScript.
+
+**O que alterei:**  
+Ajustei o layout e conferi a responsividade.
+
+---
+
+## Interação 5 — Testes e correções
+
+**O que pedi:**  
+Pedi para verificar se a aplicação atendia aos requisitos da atividade.
+
+**O que o Copilot respondeu:**  
+Analisou o projeto e apontou possíveis melhorias e erros.
+
+**O que alterei:**  
+Direcionei o copilot para os problemas encontrados e testei novamente a aplicação.
