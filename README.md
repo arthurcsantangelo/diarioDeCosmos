@@ -1,21 +1,45 @@
-Clone o repositório:
+# Diário de Cosmos
 
-git clone URL_DO_SEU_REPOSITORIO
+Aplicação web para consultar a Astronomy Picture of the Day (APOD) da NASA,
+com uma galeria dos 7 registros mais recentes, suporte a imagens e vídeos e
+consulta por data.
 
-Entre na pasta:
+## Requisitos
 
-cd diarioDeCosmos
+- Node.js 18 ou superior
+- Uma chave da API NASA
 
-Instale as dependências:
+## Como executar
 
-npm install
+1. Instale as dependências:
 
-Crie um arquivo .env na raiz do projeto e adicione sua chave:
+   ```bash
+   npm install
+   ```
 
-NASA_API_KEY=sua_chave_aqui
+2. Crie ou edite o arquivo `.env` na raiz do projeto e configure a chave:
 
-Inicie o servidor:
+   ```env
+   NASA_API_KEY=sua_chave_da_nasa
+   ```
 
-npm start
+3. Inicie o servidor:
 
-Acesse no navegador o endereço informado pelo servidor.
+   ```bash
+   npm start
+   ```
+
+4. Abra [http://localhost:3000](http://localhost:3000).
+
+Durante o desenvolvimento, use `npm run dev` para reiniciar o servidor quando
+os arquivos do backend forem alterados.
+
+## Estrutura
+
+- `frontend/`: página, estilos e interações do navegador.
+- `backend/routes/`: rotas HTTP da aplicação.
+- `backend/controllers/`: validação de entrada e respostas HTTP.
+- `backend/services/`: comunicação com a API NASA APOD.
+
+A chave `NASA_API_KEY` é usada somente no backend. O arquivo `.env` não deve
+ser enviado ao GitHub.

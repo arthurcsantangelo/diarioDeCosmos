@@ -3,16 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Diário de Cosmos: uma janela para o universo.">
+    <meta name="description" content="Explore a imagem astronômica do dia da NASA.">
     <title>Diário de Cosmos</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/app.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1>Diário de Cosmos</h1>
-      <p>Uma janela para o universo, uma descoberta de cada vez.</p>
-      <p>A estrutura inicial está pronta. A consulta à NASA APOD será adicionada em uma próxima etapa.</p>
-    </main>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Diário de Cosmos, página inicial">
+          <span>DIÁRIO DE COSMOS</span>
+        </a>
+        <span class="header-note">O universo em foco</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">ASTRONOMY PICTURE OF THE DAY</p>
+          <h1 id="page-title">Uma janela para o universo.</h1>
+          <p class="intro-copy">Explore a imagem astronômica do dia, escolhida pela NASA.</p>
+        </section>
+
+        <form class="date-form" id="date-form">
+          <label for="apod-date">Escolha uma data</label>
+          <div class="date-controls">
+            <input id="apod-date" name="date" type="date" required>
+            <button class="button button-primary" type="submit">Ver imagem</button>
+            <button class="button button-secondary" id="today-button" type="button">Hoje</button>
+          </div>
+        </form>
+
+        <p class="status" id="status" role="status" aria-live="polite" hidden></p>
+
+        <article class="apod-card" id="apod-content" hidden>
+          <div class="media-frame" id="apod-media"></div>
+          <div class="apod-details">
+            <div class="apod-heading">
+              <div>
+                <p class="eyebrow">REGISTRO CÓSMICO</p>
+                <h2 id="apod-title"></h2>
+              </div>
+              <time class="apod-date" id="apod-date-label"></time>
+            </div>
+            <p class="copyright" id="apod-copyright" hidden></p>
+            <p class="explanation" id="apod-explanation"></p>
+          </div>
+        </article>
+
+        <section class="gallery-section" id="gallery-section" aria-labelledby="gallery-title" hidden>
+          <div class="gallery-heading">
+            <div>
+              <p class="eyebrow">JANELA DO UNIVERSO</p>
+              <h2 id="gallery-title">Últimos 7 dias</h2>
+            </div>
+            <p>Selecione uma foto para ver os detalhes.</p>
+          </div>
+          <div class="apod-gallery" id="apod-gallery"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Diário de Cosmos</span>
+        <span>Dados e imagens: NASA APOD</span>
+      </footer>
+    </div>
   </body>
 </html>
